@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+.responsive-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.user img{
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%;
+    overflow: hidden; 
+}
+
+.user p {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+@media (max-width: 768px) {
+    .responsive-img {
+        width: 70%;
+        max-width: 400px;
+    }
+
+    .user p{
+        display: none;
+    }
+
+    .user img {
+        width: 60px;
+        height: 60px;
+    }
+}
