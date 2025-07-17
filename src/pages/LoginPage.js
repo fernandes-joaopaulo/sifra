@@ -1,7 +1,7 @@
 import './LoginPage.css';
-import Header from './components/Header';
-import Form from './components/Form';
-import hero from './assets/hero-img.png';
+import Header from '../components/Header/Header';
+import Form from '../components/Form/Form';
+import hero from '../assets/images/hero-img.png';
 
 export default function LoginPage() {
 
