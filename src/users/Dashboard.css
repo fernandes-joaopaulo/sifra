@@ -1,0 +1,27 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 100px;
+    gap: 30px;
+}
+
+.saudacao {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+@media (max-width: 460px) {
+
+    .main {
+        padding: 20px;
+    }
+}

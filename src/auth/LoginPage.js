@@ -1,4 +1,4 @@
-import './LoginPage.css';
+import './AuthPages.css';
 import Header from '../components/Header/Header';
 import Form from '../components/Form/Form';
 import hero from '../assets/images/hero-img.png';

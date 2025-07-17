@@ -43,8 +43,9 @@
 
 .btn{
     background-color: #20BF55;
-    font-weight: 800;  
-    width: 40%;
+    font-weight: 700;  
+    width: auto;
+    padding: 14px;
     height: 40px;
     border-radius: 12px;
     border: none;
