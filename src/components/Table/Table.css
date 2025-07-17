@@ -1,0 +1,11 @@
+.table-box {
+    max-height: 400px;
+    width: fit-content;
+    overflow: scroll;
+}
+
+table{
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 100px 18px;
+}
