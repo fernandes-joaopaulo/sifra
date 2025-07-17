@@ -5,6 +5,7 @@ import icon1 from "./assets/icons/check-list.png";
 import icon2 from "./assets/icons/consulta.png";
 import icon3 from "./assets/icons/info.png";
 import icon4 from "./assets/icons/alunos.png";
+import icon5 from "./assets/icons/editar.png";
 
 function App() {
 
