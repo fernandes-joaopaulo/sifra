@@ -1,0 +1,55 @@
+.box{
+    background-color: #000;
+    color: #FFF; 
+    justify-content: center;
+    align-items: center;
+    padding: 36px 50px 36px 50px;
+    width: 300px;
+    border-radius: 20px;
+}
+
+.innerBox{
+    display: flex;
+    flex-direction: column;
+    gap: 43px;
+}
+
+.title{
+    font-weight: 100;
+    font-size: 20px;
+    margin: 0;
+}
+
+.label{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    font-weight: 600;
+    font-size: 16px;
+    gap: 13px;
+    margin-bottom: 20px;
+}
+
+.label input{
+    border-radius: 8px;
+    border: none;
+    height: 24px;
+}
+
+.divBtn{
+    text-align: center;
+}
+
+.btn{
+    background-color: #20BF55;
+    font-weight: 800;  
+    width: 40%;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+}
+
+.cadastro{
+    font-size: 12px;
+    font-weight: 100;
+}
