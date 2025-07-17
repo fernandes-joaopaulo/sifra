@@ -16,7 +16,7 @@ export default function Form(props) {
                     <p className='cadastro'><u>Não possui login? Realize seu cadastro.</u></p>
                 </div>
                 <div className='divBtn'>
-                    <input className='btn' type="submit" name="submit" value={props.button.title}/>
+                    <input className='btn' type="submit" name="submit" value={props.button.value}/>
                 </div>                
             </div>
         </div>
