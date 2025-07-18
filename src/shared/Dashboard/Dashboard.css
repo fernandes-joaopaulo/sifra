@@ -6,11 +6,6 @@
     gap: 30px;
 }
 
-.saudacao {
-    font-size: 32px;
-    font-weight: 600;
-}
-
 .cards {
     display: flex;
     flex-wrap: wrap;

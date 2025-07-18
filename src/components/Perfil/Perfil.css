@@ -40,19 +40,3 @@
 .btn-icon img{
     width: 24px;
 }
-
-@media (max-width: 768px) {
-    .responsive-img {
-        width: 70%;
-        max-width: 400px;
-    }
-
-    .user p{
-        display: none;
-    }
-
-    .user img {
-        width: 60px;
-        height: 60px;
-    }
-}

@@ -1,22 +1,10 @@
 .barra-box {
     background-color: #000000;
     color: #ffffff;
-    width: 900px;
-    height: 25px;
+    font-size: 20px;
     font-weight: 100;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 17px;
-    border-radius: 15px;
+    padding-left: 30px;
+    border-radius: 12px;
     cursor: pointer;
-}
-
-
-@media (max-width: 460px) {
-    
-    .barra-box {
-        width: 200px;
-        height: 200px;
-    }
 }

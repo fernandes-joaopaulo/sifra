@@ -1,14 +1,9 @@
 import "./Dashboard.css";
-import Header from "../components/Header/Header";
-import Card from "../components/Card/Card";
-
-import pic from "../assets/images/user.jpeg";
+import Card from "../../components/Card/Card";
 
 export default function Dashboard(props) {
-
     return (
         <>
-            <Header image={pic} username={props.username}/>
             <div className="main">
                 <p className="saudacao">Olá, {props.username}!</p>
                 <div className="cards">

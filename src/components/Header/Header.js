@@ -4,7 +4,7 @@ import logo from "../../assets/images/logo.png";
 export default function Header(props){
 
     return(
-        <div className="container">
+        <div className="header">
             <div>
                 <img src={logo} alt="Logo do SIFRA" className="responsive-img"/>
             </div>

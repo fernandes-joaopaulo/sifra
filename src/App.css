@@ -1,3 +1,11 @@
 .app {
   font-family: "Roboto", sans-serif;
 }
+
+footer {
+  font-weight: 600;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+  padding: 5px;
+}
