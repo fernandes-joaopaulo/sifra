@@ -1,25 +1,14 @@
 import './App.css';
-
-import SelecionarDisciplina from './shared/SelecionarDisciplina/SelecionarDisciplina';
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from "./routes/AppRoutes"
 
 function App() {
 
-  const disciplinas = [
-    {nome: "DCC117 A - Modelagem de Sistemas", cod: "DCC117A"},
-    {nome: "DCC117 A - Modelagem de Sistemas", cod: "DCC117A"},
-    {nome: "DCC117 A - Modelagem de Sistemas", cod: "DCC117A"},
-    {nome: "DCC117 A - Modelagem de Sistemas", cod: "DCC117A"},
-  ];
-
   return (
     <div className='app'>
-
-      <SelecionarDisciplina disciplinas={disciplinas}/>
-
-      <footer>
-        <small>&copy; 2025 - SIFRA</small>
-      </footer>
-
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
     </div>
   );
 }
