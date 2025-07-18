@@ -6,7 +6,7 @@
     gap: 30px;
 }
 
-.user img{
+.user-img{
     width: 150px; 
     height: 150px; 
     border-radius: 50%;
@@ -26,20 +26,19 @@
     margin: 0px;
 }
 
-.bottom div{
+.btn-icon{
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgb(8, 8, 8);
-    width: 30px; 
-    height: 30px;
+    width: fit-content;
+    padding: 5px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.btn img{
-    width: 21px; 
-    height: 22px;
+.btn-icon img{
+    width: 24px;
 }
 
 @media (max-width: 768px) {
