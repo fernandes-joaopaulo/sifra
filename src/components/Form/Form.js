@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Form.css';
 
 export default function Form(props) {
@@ -13,7 +14,9 @@ export default function Form(props) {
                             <input type={field.type} name={field.name} />
                         </div>
                     ))}
-                    <p className='cadastro' style={{display:`${props.display}`}}><u>Não possui login? Realize seu cadastro.</u></p>
+                    <Link to={"/cadastro"} className='cadastro' style={{display:`${props.display}`}}>
+                        <u>Não possui login? Realize seu cadastro.</u>
+                    </Link>
                 </div>
                 <div className='divBtn'>
                     <input className='btn' type="submit" name="submit" value={props.button.value}/>
