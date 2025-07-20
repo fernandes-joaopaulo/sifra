@@ -1,20 +1,22 @@
 .main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hero-img {
+  width: 500px;
 }
 
 @media (max-width: 1024px) {
-
-    .hero-img{
-        width: 400px;
-    }
+  .hero-img {
+    width: 400px;
+  }
 }
 
 @media (max-width: 768px) {
-    .hero-img{
-        display: none;
-    }
+  .hero-img {
+    display: none;
+  }
 }

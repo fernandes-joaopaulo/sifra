@@ -8,7 +8,9 @@ const HomeLayout = () => {
     <>
       <Header display={"none"}/>
 
+      <div className="main-layout">
         <Outlet />
+      </div>
 
       <footer>
         <small>&copy; 2025 - SIFRA</small>

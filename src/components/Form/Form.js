@@ -11,7 +11,7 @@ export default function Form(props) {
                     {props.formData.map((field) => (
                         <div key={field.name} className='label'>
                             <label>{field.label}</label>
-                            <input type={field.type} name={field.name} />
+                            <input type={field.type} name={field.name} placeholder={field.label} />
                         </div>
                     ))}
                     <Link to={"/cadastro"} className='cadastro' style={{display:`${props.display}`}}>

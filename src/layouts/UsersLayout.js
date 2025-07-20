@@ -8,8 +8,10 @@ const HomeLayout = () => {
     <>
       <Header/>
 
+      <div className="main-layout">
         <Outlet />
-
+      </div>
+      
       <footer>
         <small>&copy; 2025 - SIFRA</small>
       </footer>

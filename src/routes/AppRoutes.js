@@ -5,6 +5,7 @@ import LoginPage from '../auth/LoginPage';
 import RegisterPage from '../auth/RegisterPage';
 
 const AppRoutes = () => {
+
   return (
     <Routes>
       <Route element={<HomeLayout />}>

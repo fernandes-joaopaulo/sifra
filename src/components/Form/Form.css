@@ -33,8 +33,9 @@
 
 .label input{
     border-radius: 8px;
-    border: none;
+    border: #20BF55 solid 0.5px;
     height: 24px;
+    padding-left: 12px;
 }
 
 .divBtn{
