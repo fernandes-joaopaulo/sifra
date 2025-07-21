@@ -1,8 +1,22 @@
 import './AuthPages.css';
 import Form from '../components/Form/Form';
 import hero from '../assets/images/hero-img.png';
+import React from 'react';
+import api from '../service/api'
 
 export default function LoginPage() {
+
+    const [usuarios, setUsuarios] = React.useState([{}]);
+
+    React.useEffect(() => {
+    api.get('')
+        .then((response) => {
+        setUsuarios(response.data);
+        })
+        .catch((error) => {
+        console.error('Erro ao carregar usuarios:', error);
+        });
+    }, []);
 
     const title = "Olá! Entre ou cadastre-se.";
     const formData = [
