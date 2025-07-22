@@ -1,36 +1,75 @@
-import './AuthPages.css';
-import Form from '../components/Form/Form';
-import hero from '../assets/images/hero-img.png';
-import React from 'react';
-import api from '../service/api'
+import "./AuthPages.css";
+import hero from "../assets/images/hero-img.png";
+import { Link } from "react-router-dom";
+import api from "../service/api";
+import { useState } from "react";
 
 export default function LoginPage() {
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [erro, setErro] = useState("");
 
-    const [usuarios, setUsuarios] = React.useState([{}]);
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await api.post("/auth/login", {
+        email,
+        senha,
+      });
 
-    React.useEffect(() => {
-    api.get('')
-        .then((response) => {
-        setUsuarios(response.data);
-        })
-        .catch((error) => {
-        console.error('Erro ao carregar usuarios:', error);
-        });
-    }, []);
+      // Login bem-sucedido
+      console.log("Usuário logado:", response.data);
+      setErro("");
+      // Redirecionar ou guardar dados aqui
+      localStorage.setItem("usuarioLogado", JSON.stringify(response.data));
 
-    const title = "Olá! Entre ou cadastre-se.";
-    const formData = [
-        {label: "Login", type: "text", name: "login"},
-        {label: "Senha", type: "password", name: "senha"}
-    ];
-    const button = {onSubmit: "", value: "Entrar"};
+    } catch (error) {
+      if (error.response && error.response.status === 401) {
+        setErro("Email ou senha incorretos.");
+      } else {
+        console.error("Erro desconhecido:", error);
+        setErro("Email ou senha incorretos.");
+      }
+    }
+  };
 
-    return (
-        <>
-            <div className='main'>
-                <Form title={title} formData={formData} button={button} />
-                <img className='hero-img' src={hero} alt="Imagem de fundo" /> 
-            </div>
-        </>
-    );
+  return (
+    <>
+      <div className="main">
+        <div className="box">
+          <div className="innerBox">
+            <p className="title">{"Olá! Entre ou cadastre-se."}</p>
+            <form onSubmit={handleLogin}>
+              <div className="label">
+                <label>Login</label>
+                <input
+                  type="text"
+                  name="login"
+                  placeholder="Login"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                {erro && <p className="error">{erro}</p>}
+              </div>
+              <div className="label">
+                <label>Senha</label>
+                <input
+                  type="password"
+                  name="senha"
+                  placeholder="Senha"
+                  onChange={(e) => setSenha(e.target.value)}
+                />
+              </div>
+              <Link to={"/cadastro"} className="cadastro">
+                <u>Não possui login? Realize seu cadastro.</u>
+              </Link>
+              <div className="divBtn">
+                <input className="btn" type="submit" value="Entrar" />
+              </div>
+            </form>
+          </div>
+        </div>
+        <img className="hero-img" src={hero} alt="Imagem de fundo" />
+      </div>
+    </>
+  );
 }

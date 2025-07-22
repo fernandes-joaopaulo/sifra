@@ -9,6 +9,72 @@
   width: 500px;
 }
 
+.box{
+    background-color: #000;
+    color: #FFF; 
+    justify-content: center;
+    align-items: center;
+    padding: 36px 50px 36px 50px;
+    width: 300px;
+    height: fit-content;
+    border-radius: 20px;
+}
+
+.innerBox{
+    display: flex;
+    flex-direction: column;
+    gap: 43px;
+}
+
+.title{
+    font-weight: 100;
+    font-size: 20px;
+    margin: 0;
+}
+
+.label{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    font-weight: 600;
+    font-size: 16px;
+    gap: 13px;
+    margin-bottom: 20px;
+}
+
+.label input{
+    border-radius: 8px;
+    border: #20BF55 solid 0.5px;
+    height: 24px;
+    padding-left: 12px;
+}
+
+.divBtn{
+    text-align: center;
+}
+
+.btn{
+    background-color: #20BF55;
+    font-weight: 700;  
+    width: auto;
+    padding: 14px;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+}
+
+.cadastro{
+    font-size: 12px;
+    font-weight: 100;
+    color: #fff;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  font-weight: 100;
+}
+
 @media (max-width: 1024px) {
   .hero-img {
     width: 400px;

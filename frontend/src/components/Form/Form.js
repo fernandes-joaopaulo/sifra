@@ -7,7 +7,7 @@ export default function Form(props) {
         <div className='box'>
             <div className='innerBox'>
                 <p className='title'>{props.title}</p>
-                <div>
+                <form>
                     {props.formData.map((field) => (
                         <div key={field.name} className='label'>
                             <label>{field.label}</label>
@@ -17,7 +17,7 @@ export default function Form(props) {
                     <Link to={"/cadastro"} className='cadastro' style={{display:`${props.display}`}}>
                         <u>Não possui login? Realize seu cadastro.</u>
                     </Link>
-                </div>
+                </form>
                 <div className='divBtn'>
                     <input className='btn' type="submit" name="submit" value={props.button.value}/>
                 </div>                
