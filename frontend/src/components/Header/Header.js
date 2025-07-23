@@ -1,7 +1,16 @@
 import './Header.css';
 import logo from "../../assets/images/logo.png";
+import logoutIcon from "../../assets/icons/logout.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Header(props){
+
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        localStorage.removeItem("usuarioLogado");
+        navigate("/"); 
+    };
 
     return(
         <div className="header">
@@ -10,7 +19,8 @@ export default function Header(props){
             </div>
             <div className="user" style={{display: `${props.display}`}}>
                 <p>{props.username}</p>
-                <img src={props.image} alt="Foto do usuário"/>
+                <img className='user-img' src={props.image} alt="Foto do usuário"/>
+                <img className='logout-icon' src={logoutIcon} alt='Sair' title='Sair' onClick={handleLogout}/>
             </div>
         </div>
     );

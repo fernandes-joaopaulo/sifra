@@ -2,7 +2,8 @@ import { Routes, Route } from 'react-router-dom';
 
 import HomeLayout from '../layouts/HomeLayout';
 import LoginPage from '../auth/LoginPage';
-import RegisterPage from '../auth/RegisterPage';
+import UsersLayout from "../layouts/UsersLayout";
+import Dashboard from "../shared/Dashboard/Dashboard";
 
 const AppRoutes = () => {
 
@@ -10,7 +11,9 @@ const AppRoutes = () => {
     <Routes>
       <Route element={<HomeLayout />}>
         <Route path="/" element={<LoginPage />} />
-        <Route path="/cadastro" element={<RegisterPage />} />
+      </Route>
+      <Route element={<UsersLayout />}>
+        <Route path='/dashboard' element={<Dashboard />}/>
       </Route>
     </Routes>
   );

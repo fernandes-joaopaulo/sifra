@@ -1,22 +1,30 @@
 import "./Layouts.css";
 
 import { Outlet } from "react-router-dom";
-import Header from '../components/Header/Header';
+import Header from "../components/Header/Header";
+import { Navigate } from "react-router-dom";
 
-const HomeLayout = () => {
+const UsersLayout = () => {
+
+  const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
+
+  if (!usuario) {
+    return <Navigate to="/" />; // redireciona para a tela de login
+  }
+
   return (
     <>
-      <Header/>
+      <Header username={usuario.nome} image={usuario.image}/>
 
-      <div className="main-layout">
+      <div className="users-layout">
         <Outlet />
       </div>
-      
+
       <footer>
         <small>&copy; 2025 - SIFRA</small>
       </footer>
     </>
   );
-}
+};
 
-export default HomeLayout;
+export default UsersLayout;

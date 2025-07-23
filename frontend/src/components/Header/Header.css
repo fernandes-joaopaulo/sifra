@@ -19,7 +19,7 @@
     gap: 10px;
 }
 
-.user img{
+.user-img{
     width: 80px; 
     height: 80px; 
     border-radius: 50%;
@@ -29,6 +29,12 @@
 .user p {
     font-size: 20px;
     font-weight: 400;
+}
+
+.logout-icon {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {

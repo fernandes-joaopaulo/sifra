@@ -1,6 +1,6 @@
 import "./AuthPages.css";
 import hero from "../assets/images/hero-img.png";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router";
 import api from "../service/api";
 import { useState } from "react";
 
@@ -8,6 +8,7 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [erro, setErro] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -22,7 +23,8 @@ export default function LoginPage() {
       setErro("");
       // Redirecionar ou guardar dados aqui
       localStorage.setItem("usuarioLogado", JSON.stringify(response.data));
-
+      navigate("/dashboard");
+      
     } catch (error) {
       if (error.response && error.response.status === 401) {
         setErro("Email ou senha incorretos.");
@@ -38,7 +40,7 @@ export default function LoginPage() {
       <div className="main">
         <div className="box">
           <div className="innerBox">
-            <p className="title">{"Olá! Entre ou cadastre-se."}</p>
+            <p className="title">Olá! <br/> Faça seu login.</p>
             <form onSubmit={handleLogin}>
               <div className="label">
                 <label>Login</label>
@@ -59,9 +61,6 @@ export default function LoginPage() {
                   onChange={(e) => setSenha(e.target.value)}
                 />
               </div>
-              <Link to={"/cadastro"} className="cadastro">
-                <u>Não possui login? Realize seu cadastro.</u>
-              </Link>
               <div className="divBtn">
                 <input className="btn" type="submit" value="Entrar" />
               </div>
