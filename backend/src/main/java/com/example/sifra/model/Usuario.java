@@ -24,6 +24,7 @@ public class Usuario {
     private String telefone;
     private String email;
     private String senha;
+    private String image;
     private String perfil;
 
     public Usuario(UsuarioRequestDTO data){
@@ -31,6 +32,7 @@ public class Usuario {
         this.telefone = data.telefone();
         this.email = data.email();
         this.senha = data.senha();
+        this.image = data.image();
         this.perfil = data.perfil();    
     }
 }
