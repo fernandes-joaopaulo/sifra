@@ -14,7 +14,5 @@ import lombok.NoArgsConstructor;
 public class Coordenador extends Usuario {
 
     private String departamento;
-
-    // Getters e Setters
 }
 

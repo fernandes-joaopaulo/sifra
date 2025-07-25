@@ -2,9 +2,28 @@ package com.example.sifra.dto;
 
 import com.example.sifra.model.Usuario;
 
-public record UsuarioResponseDTO(Long id, String nome, String telefone, String email, String senha, String image, String perfil) {
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Getter;
+
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+public class UsuarioResponseDTO {
+
+    private Long id;
+    private String nome;
+    private String telefone;
+    private String email;
+    private String image;
+    private String perfil;
 
     public UsuarioResponseDTO(Usuario usuario){
-        this(usuario.getId(), usuario.getNome(), usuario.getTelefone(), usuario.getEmail(), usuario.getSenha(), usuario.getImage(), usuario.getPerfil());
+        this.id = usuario.getId();
+        this.nome = usuario.getNome();
+        this.telefone = usuario.getTelefone();
+        this.email = usuario.getEmail();
+        this.image = usuario.getImage();
+        this.perfil = usuario.getPerfil();
     }
 }

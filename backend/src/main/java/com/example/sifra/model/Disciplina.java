@@ -2,7 +2,6 @@ package com.example.sifra.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -11,7 +10,6 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(of = "id")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Disciplina {
     
@@ -21,5 +19,6 @@ public class Disciplina {
     private String nome;
     private String codigo;
     private Integer cargaHoraria;
+    private Integer faltasPermitidas;
 }
 

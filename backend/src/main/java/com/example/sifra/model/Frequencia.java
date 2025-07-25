@@ -1,12 +1,9 @@
 package com.example.sifra.model;
 
-import java.sql.Date;
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
 @Entity
 @Table(name = "frequencias")
 @Getter
@@ -18,8 +15,13 @@ public class Frequencia {
     private Long id;
 
     private boolean presente;
-    private Date dataRegistro;
-    private Long aulaId;
-    private Long discenteId;
+
+    @ManyToOne
+    @JoinColumn(name = "aula_id")
+    private Aula aula;    
+    
+    @ManyToOne
+    @JoinColumn(name = "discente_id")
+    private Discente discente;
 }
 
