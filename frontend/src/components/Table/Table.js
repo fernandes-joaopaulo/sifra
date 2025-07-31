@@ -6,13 +6,16 @@ export default function Table(props) {
             <table>
                 <thead>
                     <tr> 
-                        <th>Nome</th> <th>Matrícula</th> <th>Faltas</th> <th></th> 
+                        <th>Nome</th><th>Matrícula</th><th>Faltas</th>{props.tipo === "frequencia" ? <th>Presente</th> : null}
                     </tr>
                 </thead>
                 <tbody>
                     {props.tableData.map((row) => (
                     <tr key={row.matricula}>
-                        <td>{row.nome}</td> <td>{row.matricula}</td> <td>{row.faltas}</td> <td><input type="checkbox"/></td>
+                        <td>{row.nome}</td><td>{row.matricula}</td><td>0</td>
+                        <td>
+                        {props.tipo === "frequencia" ? <input type="checkbox"/> : null}
+                        </td>    
                     </tr>
                     ))}
                 </tbody>

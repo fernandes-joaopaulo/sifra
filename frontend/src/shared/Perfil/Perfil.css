@@ -1,0 +1,13 @@
+.perfil-form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    font-weight: 600;
+    gap: 30px;
+}
+
+.perfil-form div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

@@ -19,8 +19,6 @@ public class Turma extends Disciplina{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String codigo;
-
     @ManyToOne
     @JoinColumn(name = "disciplina_id")
     private Disciplina disciplina;
@@ -39,4 +37,8 @@ public class Turma extends Disciplina{
 
     @OneToMany(mappedBy = "turma", cascade = CascadeType.ALL)
     private List<Aula> aulas;
+
+    public List<Discente> getDiscentes(){
+        return discentes;
+    }
 }

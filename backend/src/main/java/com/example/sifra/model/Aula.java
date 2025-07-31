@@ -1,15 +1,17 @@
 package com.example.sifra.model;
 
-import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 @Entity
 @Table(name = "aulas")
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Aula {
@@ -18,7 +20,7 @@ public class Aula {
     private Long id;
 
     @Temporal(TemporalType.DATE)
-    private Date data;
+    private LocalDate data;
     
     @ManyToOne
     @JoinColumn(name = "turma_id")

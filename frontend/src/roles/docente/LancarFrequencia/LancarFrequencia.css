@@ -1,0 +1,21 @@
+.campo {
+    border: solid 0.5px #000;
+    border-radius: 12px;
+    width: 100px;
+    height: 25px;
+}
+
+.flex-form{
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    gap: 5px;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}

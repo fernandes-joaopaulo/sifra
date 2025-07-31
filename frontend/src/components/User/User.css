@@ -1,4 +1,4 @@
-.user {
+.perfil {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,7 +6,7 @@
     gap: 30px;
 }
 
-.user-img{
+.perfil-img{
     width: 150px; 
     height: 150px; 
     border-radius: 50%;

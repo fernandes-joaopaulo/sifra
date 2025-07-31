@@ -5,7 +5,7 @@ import java.util.List;
 import com.example.sifra.model.Docente;
 
 public record DocenteDTO(Long id, String nome, String telefone, String email, String image, String departamento,
-        String perfil, List<TurmaDTO> turmasAtivas) {
+        String perfil, List<TurmaResponseDTO> turmasAtivas) {
 
     public DocenteDTO(Docente data) {
         this(
@@ -16,7 +16,7 @@ public record DocenteDTO(Long id, String nome, String telefone, String email, St
                 data.getImage(),
                 data.getDepartamento(),
                 data.getPerfil(),
-                data.getTurmasAtivas() != null ? data.getTurmasAtivas().stream().map(TurmaDTO::new).toList() : null
+                data.getTurmasAtivas() != null ? data.getTurmasAtivas().stream().map(TurmaResponseDTO::new).toList() : null
                 );
     }
 }

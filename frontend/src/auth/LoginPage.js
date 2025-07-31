@@ -40,7 +40,7 @@ export default function LoginPage() {
       <div className="main">
         <div className="box">
           <div className="innerBox">
-            <p className="title">Olá! <br/> Faça seu login.</p>
+            <p className="title-login">Olá! <br/> Faça seu login.</p>
             <form onSubmit={handleLogin}>
               <div className="label">
                 <label>Login</label>
