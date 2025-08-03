@@ -47,13 +47,20 @@ public class FrequenciaController {
         }
     }
 
-    // @GetMapping("/discentes")
-    // public List<DiscenteDTO> getDiscentesTurma(@RequestParam Long turmaId) {
-    //     List<Discente> discentes = turmaRep.findDiscentesByTurmaIdOrdered(turmaId);
-    //     return discentes.stream()
-    //             .map(DiscenteDTO::new)
-    //             .collect(Collectors.toList());
-    // }
+    @GetMapping("/consultar")
+    public List<TurmaResponseDTO> getTurmasAtivasDiscente(@RequestParam Long discenteId) {
+
+        Optional<Discente> optionalDiscente = discenteRep.findById(discenteId);
+        if (optionalDiscente.isPresent()) {
+            Discente discente = optionalDiscente.get();
+            return discente.getTurmasAtivas()
+                    .stream()
+                    .map(TurmaResponseDTO::new)
+                    .collect(Collectors.toList());
+        } else {
+            return List.of(); // ou lançar exceção se preferir
+        }
+    }
 
     @GetMapping("/discentes")
     public List<DiscenteDTO> getDiscentesComFaltas(@RequestParam Long turmaId) {

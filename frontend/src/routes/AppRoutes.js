@@ -8,6 +8,10 @@ import SelecionarDisciplina from "../shared/SelecionarDisciplina/SelecionarDisci
 import LancarFrequencia from "../roles/docente/LancarFrequencia/LancarFrequencia";
 import Perfil from "../shared/Perfil/Perfil";
 import Registro from "../shared/Registro/Registro";
+import ConsultarFrequencia from "../roles/discente/ConsultarFrequencia";
+import Relatorio from "../roles/coordenador/Relatorio";
+import CadastroUsuario from "../roles/admin/Cadastro";
+import GerenciarUsuarios from "../roles/admin/GerenciarUsuarios";
 
 const AppRoutes = () => {
   return (
@@ -26,11 +30,17 @@ const AppRoutes = () => {
           path="/dashboard/lancarFrequencia/:turmaId"
           element={<LancarFrequencia />}
         />
+        <Route path="/dashboard/registro/:turmaId" element={<Registro />} />
+        <Route path="/dashboard/consulta" element={<SelecionarDisciplina />} />
         <Route
-          path="/dashboard/registro/:turmaId"
-          element={<Registro />}
+          path="/dashboard/consulta/:turmaId"
+          element={<ConsultarFrequencia />}
         />
+        <Route path="/dashboard/relatorio" element={<SelecionarDisciplina />} />
+        <Route path="/dashboard/relatorio/:turmaId" element={<Relatorio />} />
         <Route path="/dashboard/perfil" element={<Perfil />} />
+        <Route path="/dashboard/cadastro" element={<CadastroUsuario />} />
+        <Route path="/dashboard/gerenciamento" element={<GerenciarUsuarios />} />
       </Route>
     </Routes>
   );

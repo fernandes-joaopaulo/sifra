@@ -11,3 +11,55 @@
     flex-direction: column;
     gap: 10px;
 }
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    gap: 30px;
+}
+
+.perfil-img{
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%;
+    overflow: hidden; 
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.bottom p {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0px;
+}
+
+.btn-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(8, 8, 8);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-icon img{
+    width: 24px;
+}
+
+.editable-input{
+    border: none;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 0;
+    width: min-content;
+    text-align: center;
+}

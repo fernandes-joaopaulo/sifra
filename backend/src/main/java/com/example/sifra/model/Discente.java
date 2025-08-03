@@ -1,6 +1,9 @@
 package com.example.sifra.model;
 
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
@@ -21,6 +24,7 @@ public class Discente extends Usuario {
     private String curso;
     private String semestreIngresso;
 
+    @JsonIgnore
     @ManyToMany(mappedBy = "discentes")
     private List<Turma> turmasAtivas;
 }

@@ -24,7 +24,7 @@ export default function Dashboard() {
     }
     if (usuario.perfil === "admin") {
       setCards([
-        { label: "Solicitações de Cadastro", icon: "check-list.png" },
+        { label: "Cadastrar usuário", icon: "check-list.png" },
         { label: "Gerenciar usuários", icon: "consulta.png" },
       ]);
     }
@@ -43,11 +43,17 @@ export default function Dashboard() {
       case "Lançar frequência":
         return "./lancarFrequencia";
       case "Consultar frequência":
-        return "./consultarFrequencia";
+        return "./consulta";
       case "Minhas informações":
         return "./perfil";
       case "Registro de alunos":
         return "./registro";
+      case "Gerar relatório":
+        return "./relatorio";
+      case "Cadastrar usuário":
+        return "./cadastro";
+      case "Gerenciar usuários":
+        return "./gerenciamento";
       default:
         return "/";
     }

@@ -21,8 +21,13 @@ export default function SelecionarDisciplina() {
           });
           setTurmas(response.data);
         }
-        if(usuario.perfil === "coordenador"){
+        if (usuario.perfil === "coordenador") {
           const response = await api.get("/turmas");
+          setTurmas(response.data);
+        }
+        if (usuario.perfil === "discente") {
+          const response = await api.get("/frequencia/consultar", 
+            {params: {discenteId: usuario.id}});
           setTurmas(response.data);
         }
       } catch (error) {

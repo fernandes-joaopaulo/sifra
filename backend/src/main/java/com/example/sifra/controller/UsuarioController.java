@@ -1,38 +1,59 @@
 package com.example.sifra.controller;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.sifra.dto.UsuarioRequestDTO;
-import com.example.sifra.dto.UsuarioResponseDTO;
-import com.example.sifra.model.Usuario;
-import com.example.sifra.repository.UsuarioRepository;
+import com.example.sifra.model.*;
+import com.example.sifra.repository.*;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
-@RequestMapping("/usuarios")
+@RequestMapping("/usuario")
 public class UsuarioController {
-            
+
     @Autowired
     private UsuarioRepository repository;
+    @Autowired
+    private DocenteRepository docenteRepository;
+    @Autowired
+    private DiscenteRepository discenteRepository;
+    @Autowired
+    private CoordenadorRepository coordenadorRepository;
 
-    @PostMapping
-    public void saveUsuario(@RequestBody UsuarioRequestDTO data) {
-        Usuario userData = new Usuario(data);
-        repository.save(userData);
-        return;
+    @PostMapping("/save/docente")
+    public void saveDocente(@RequestBody Docente data) {
+        docenteRepository.save(data);
     }
-    
+
+    @PostMapping("/save/discente")
+    public void saveDiscente(@RequestBody Discente data) {
+        discenteRepository.save(data);
+    }
+
+    @PostMapping("/save/coordenador")
+    public void saveCoordenador(@RequestBody Coordenador data) {
+        coordenadorRepository.save(data);
+    }
+
     @GetMapping
-    public List<UsuarioResponseDTO> getAll() {
-        return repository.findAll().stream()
-                .map(UsuarioResponseDTO::new)
-                .collect(Collectors.toList());
+    public Usuario getUsuario(@RequestParam Long id) {
+        return repository.findById(id).orElse(null);
     }
+
+    @GetMapping("/gerenciar")
+    public List<Usuario> getUsuarios() {
+        return repository.findAll();
+    }
+
+    @PostMapping("/delete")
+    public void deletarUsuario(@RequestBody Long id) {
+        repository.deleteById(id);
+    }
+
 }
