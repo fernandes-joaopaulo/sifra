@@ -9,6 +9,14 @@ Este projeto é um sistema de controle de frequência escolar desenvolvido com:
 
 ---
 
+## 👨‍💻 Desenvolvedores
+
+- João Paulo Macedo 
+- Pedro Muniz 
+- Igor Rocha
+
+---
+
 ## 🛠️ Requisitos
 
 Antes de iniciar, certifique-se de ter os seguintes softwares instalados:
@@ -121,11 +129,3 @@ admin@ufexemplo.edu / admin123
 - Banco de dados hospedado no [Render](https://render.com/)
 - Frontend pode ser hospedado no [Vercel](https://vercel.com/) ou [Netlify](https://www.netlify.com/)
 - Backend pode ser deployado no [Railway](https://railway.app/) ou [Render](https://render.com/)
-
----
-
-## 👨‍💻 Desenvolvedores
-
-- João Paulo Macedo 
-- Pedro Muniz 
-- Igor Rocha
