@@ -102,19 +102,19 @@ const api = axios.create({
 
 ## 🛠️ Usuários cadastrados
 
-# Docente
+- Docente
 maria@ufexemplo
 senha123
 
-# Discente
+- Discente
 joao@aluno.ufexemplo.edu
 senha456
 
-# Coordenador
+- Coordenador
 ana@ufexemplo.edu
 senha789
 
-# Admin
+- Admin
 admin@ufexemplo.edu
 admin123
 
@@ -130,6 +130,6 @@ admin123
 
 ## 👨‍💻 Desenvolvedores
 
-João Paulo Macedo 
-Pedro Muniz 
-Igor Rocha
+- João Paulo Macedo 
+- Pedro Muniz 
+- Igor Rocha
