@@ -1,5 +1,5 @@
 
-# SIFRA - Sistema de Frequência Acadêmica
+# SIFRA - Sistema Integrado de Frequência e Assiduidade
 
 Este projeto é um sistema de controle de frequência escolar desenvolvido com:
 
@@ -100,33 +100,23 @@ const api = axios.create({
 
 ---
 
-## 🗃️ Estrutura do projeto
+## 🛠️ Usuários cadastrados
 
-```
-sifra/
-│
-├── backend/        # Aplicação Spring Boot
-│   └── src/
-│       └── main/
-│           ├── java/
-│           └── resources/
-│
-├── frontend/       # Aplicação React
-│   └── src/
-│       ├── pages/
-│       ├── components/
-│       └── assets/
-```
+# Docente
+maria@ufexemplo
+senha123
 
----
+# Discente
+joao@aluno.ufexemplo.edu
+senha456
 
-## ✅ TODO
+# Coordenador
+ana@ufexemplo.edu
+senha789
 
-- [x] Cadastro de usuários
-- [x] Lançamento de frequência
-- [x] Integração com banco PostgreSQL
-- [ ] Exportar relatório de frequência
-- [ ] Testes automatizados
+# Admin
+admin@ufexemplo.edu
+admin123
 
 ---
 
@@ -138,13 +128,8 @@ sifra/
 
 ---
 
-## 👨‍💻 Desenvolvedor
+## 👨‍💻 Desenvolvedores
 
-João Paulo  
-[linkedin.com/in/joaopaulo](#)
-
----
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT.
+João Paulo Macedo 
+Pedro Muniz 
+Igor Rocha
