@@ -102,21 +102,17 @@ const api = axios.create({
 
 ## 🛠️ Usuários cadastrados
 
-- Docente
-maria@ufexemplo
-senha123
+- Docente:
+maria@ufexemplo.edu / senha123
 
-- Discente
-joao@aluno.ufexemplo.edu
-senha456
+- Discente:
+joao@aluno.ufexemplo.edu / senha456
 
-- Coordenador
-ana@ufexemplo.edu
-senha789
+- Coordenador:
+ana@ufexemplo.edu / senha789
 
-- Admin
-admin@ufexemplo.edu
-admin123
+- Admin:
+admin@ufexemplo.edu / admin123
 
 ---
 
